@@ -1,0 +1,36 @@
+# Render Blueprint (optional) - or create the Web Service manually (see README)
+services:
+  - type: web
+    name: lavalust-products-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /api
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DB_DRIVER
+        value: mysql
+      - key: DB_CHARSET
+        value: utf8mb4
+      - key: DB_SSL
+        value: "true"
+      - key: MIGRATION_ENABLED
+        value: "false"
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_SSL_CA_CONTENT
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: REFRESH_TOKEN_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false

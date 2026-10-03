@@ -1,0 +1,6 @@
+.git
+.env
+runtime/cache/*
+runtime/logs/*
+database
+node_modules
